@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "415e9493-e58e-45fb-8225-c299a64ac8ec",
+		"name": "Task4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Food",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"id\":\"0006\",\r\n   \r\n   \"name\":\"Cake\",\r\n   \"image\":{\r\n      \"url\":\"images/0002.jpg\",\r\n      \"width\":200,\r\n      \"height\":200\r\n   },\r\n   \"thumbnail\":{\r\n      \"url\":\"images/thumbnails/0001.jpg\",\r\n      \"width\":32,\r\n      \"height\":32\r\n   },\r\n   \"type\":\"cakwe\"\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/getFood",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getFood"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create ColorThumbnail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"colorID\":\"3\",\r\n   \"colors\":{\r\n      \"color\":\"white\",\r\n      \"category\":\"uew\",\r\n      \"type\":\"xxx\",\r\n      \"code\":{\r\n         \"rgba\":\"255,255,255,1\",\r\n         \"hex\":\"#000\"\r\n      }\r\n   },\r\n   \"thumbnail\":{\r\n      \"url\":\"images/thumbnails/0002.jpg\",\r\n      \"width\":32,\r\n      \"height\":32\r\n   }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/getColorThumbnail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getColorThumbnail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search By ID for Color Thumbnail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/searchByColorID/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"searchByColorID",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
